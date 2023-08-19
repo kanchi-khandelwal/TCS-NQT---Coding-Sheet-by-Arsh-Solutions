@@ -1,0 +1,26 @@
+class Solution{
+public:
+    int countFactors(int N){
+        int count=0;
+        vector<int> v;
+        for(int i=1; i<=sqrt(N); i++)
+        {
+            if(N%i==0)
+            {
+                if(N/i==i)
+                {
+                    v.push_back(i);
+                    count++;
+                }
+                else
+                {
+                    v.push_back(i);
+                    count++;
+                    v.push_back(N/i);
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+};
