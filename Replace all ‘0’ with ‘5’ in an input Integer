@@ -1,0 +1,17 @@
+
+int convertFive(int n) {
+    int num=0;
+    int i=1;
+    while(n!=0)
+    {
+        int digit=n%10;
+        if(digit==0)
+        {
+            digit=5;
+        }
+        n=n/10;
+        num+=digit*i;
+        i=i*10;
+    }
+    return num;
+}
