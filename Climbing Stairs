@@ -1,0 +1,21 @@
+lass Solution {
+public:
+    int climbStairs(int n) {
+        int steps=0, f1=1, f2=2;
+        if(n==1)
+        {
+            return f1;
+        }
+        if(n==2)
+        {
+            return f2;
+        }
+        for(int i=2; i<n; i++)
+        {
+            steps=(f1+f2);
+            f1=f2;
+            f2=steps;
+        }
+        return steps;
+    }
+};
