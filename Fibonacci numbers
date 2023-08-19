@@ -1,0 +1,19 @@
+class Solution {
+  public:
+    int nthFibonacci(int n){
+        int f1=1, f2=1, ans;
+        if(n==2 || n==1)
+        {
+            return f2;
+        }
+        int val=2;
+        while(val<n)
+        {
+            ans=(f1+f2)%1000000007;
+            f1=f2;
+            f2=ans;
+            val++;
+        }
+        return ans;
+    }
+};
