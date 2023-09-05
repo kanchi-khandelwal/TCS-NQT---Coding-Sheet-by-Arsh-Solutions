@@ -1,0 +1,28 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        int num=n;
+        int sum=0;
+        while(n!=0)
+        {
+            int val=n%10;
+            sum+=val*val*val;
+            n=n/10;
+        }
+        if(sum==num)
+        {
+            return "Yes";
+        }
+        else
+        {
+            return "No";
+        }
+    }
+};
+
+
+// } Driver Code Ends
